@@ -10,7 +10,7 @@ _zaq_check_prefix() {
   local prefix input stripped leading_quote expected_ending_quote
   prefix=$1
   input=$2
-  stripped=${input#$~prefix }
+  stripped=${input##$~prefix }
   if [[ "$input" = "$stripped" ]]; then
     return 1
   fi
